@@ -2,7 +2,7 @@ import { FaBars } from 'react-icons/fa'
 
 const Navbar = () => {
   return (
-    <nav className="fixed overflow-hidden top-0 w-full shadow-md bg-white bg-opacity-95" role="navigation">
+    <nav className="fixed overflow-hidden top-0 w-full shadow-md bg-white bg-opacity-95 z-50" role="navigation">
       <div className="flex justify-between items-center h-14 md:h-16 max-w-5xl mx-auto px-8 text-md uppercase">
         {/* LOGO */}
         <a href="#" className="font-bold">Erick Camacho</a>
