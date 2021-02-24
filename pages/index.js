@@ -1,4 +1,6 @@
+import About from "../components/About";
 import Contact from "../components/Contact";
+import Dropdown from "../components/Dropdown";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
@@ -10,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Portfolio />
+      <About />
       <Contact />
       <Footer />
     </div>

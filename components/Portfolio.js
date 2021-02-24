@@ -7,7 +7,7 @@ const Portfolio = () => {
       title="Portfolio" 
       subtitle="Check what I've been doing lately"
     >
-      <div className="space-y-20">
+      <div className="space-y-20" id="portfolio">
         <Project i={1} project={{
           name: "Realtime Chat", 
           image: "/chat-ss.png",

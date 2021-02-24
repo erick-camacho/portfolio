@@ -7,7 +7,7 @@ const Contact = () => {
       title="Contact"
       subtitle="If you want to talk, you can find me at:"
     >
-      <div className="flex justify-center items-center space-x-10">
+      <div className="flex justify-center items-center space-x-10" id="contact">
         <a href="mailto:e.camachov94@gmail.com">
           <FaEnvelopeSquare size={32} className="hover:text-yellow-500"/>
         </a>

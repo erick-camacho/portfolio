@@ -1,21 +1,38 @@
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa';
+import NavList from './NavList';
+import NavItem from './NavItem';
+import { useState } from 'react';
+import Dropdown from './Dropdown';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
   return (
-    <nav className="fixed overflow-hidden top-0 w-full shadow-md bg-white bg-opacity-95 z-50" role="navigation">
-      <div className="flex justify-between items-center h-14 md:h-16 max-w-5xl mx-auto px-8 text-md uppercase">
-        {/* LOGO */}
-        <a href="#" className="font-bold">Erick Camacho</a>
-        {/* DROPDOWN MENU ICON */}
-        <FaBars className="cursor-pointer h-6 md:hidden"/>
-        {/* MENU */}
-        <div className="hidden md:block">
-          <a href="#" className="p-4 hover:text-yellow-500">About Me</a>
-          <a href="#" className="p-4 hover:text-yellow-500">Portfolio</a>
-          <a href="#" className="p-4 hover:text-yellow-500">Contact</a>
+    <>
+      <nav className={`fixed overflow-hidden top-0 w-full bg-white z-50 ${isOpen || "bg-opacity-95 shadow-md"}`} role="navigation">
+        <div className="flex justify-between items-center h-14 md:h-16 max-w-5xl mx-auto px-8 text-md uppercase">
+          {/* LOGO */}
+          <NavItem section="home">
+            <strong>Erick Camacho</strong>
+          </NavItem>
+          {/* DROPDOWN MENU ICON */}
+          <div className="cursor-pointer md:hidden text-yellow-500">
+            {isOpen ? (
+              <FaTimes size={20} onClick={toggle}/>
+            ) : (
+              <FaBars size={20} onClick={toggle}/>
+            )}
+          </div>
+          {/* MENU */}
+          <div className="hidden md:block">
+            <NavList/> 
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <Dropdown isOpen={isOpen} toggle={toggle}/>
+    </>
   );
 }
 
