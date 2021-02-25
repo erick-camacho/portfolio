@@ -5,8 +5,8 @@ export const projects = [
     image: "/chat.png",
     description: "This very website you're now watching. I wanted something fast and with good SEO for my portfolio, so a static website generator like Next.js seemed like a good choice.",
     stack: "ReactJS - TailwindCSS - Next.js",
-    demo: "#",
-    repo: "#"
+    demo: "https://erickcamacho.vercel.app/",
+    repo: "https://github.com/erick-camacho/portfolio"
   },
   {
     id: 2,
